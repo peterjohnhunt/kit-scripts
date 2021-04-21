@@ -7,7 +7,7 @@ let { getOrderedProjects, getMessageBoard, getMessages, createComment } = await 
 
 let projects = await getOrderedProjects()
 
-let LEADS_PROJECT_ID = await env("LEADS_PROJECT_ID", { choices: projects?.map(item => {
+let BASECAMP_LEADS_PROJECT_ID = await env("BASECAMP_LEADS_PROJECT_ID", { choices: projects?.map(item => {
   let emoji = getEmoji(item.name)
   let name  = stripEmoji(item.name)
   let html  = `<span class="class="h-12 w-12 flex-none">${name}</span>`
@@ -23,11 +23,11 @@ let LEADS_PROJECT_ID = await env("LEADS_PROJECT_ID", { choices: projects?.map(it
   }
 }) })
 
-let messageBoard = await getMessageBoard(LEADS_PROJECT_ID.toString())
+let messageBoard = await getMessageBoard(BASECAMP_LEADS_PROJECT_ID.toString())
 
-let messages = await getMessages(LEADS_PROJECT_ID, messageBoard.id)
+let messages = await getMessages(BASECAMP_LEADS_PROJECT_ID, messageBoard.id)
 
-let LEADS_MESSAGE_ID = await env("LEADS_MESSAGE_ID", { choices: messages?.sort((a, b) => (a.title > b.title) ? 1 : -1).map(item => {
+let BASECAMP_LEADS_MESSAGE_ID = await env("BASECAMP_LEADS_MESSAGE_ID", { choices: messages?.sort((a, b) => (a.title > b.title) ? 1 : -1).map(item => {
   let comments = item.comments_count
   let html = `<span class="class="h-12 w-12 flex-none">${item.title}</span>`
 
@@ -53,6 +53,6 @@ for (let index = 0; index < pieces.length; index++) {
   if (value) content.push(`<strong>${title}:</strong> ${value}`)
 }
 
-let comment = createComment({ content: `<div>${content.join('<br>')}</div>` }, LEADS_PROJECT_ID, LEADS_MESSAGE_ID)
+let comment = createComment({ content: `<div>${content.join('<br>')}</div>` }, BASECAMP_LEADS_PROJECT_ID, BASECAMP_LEADS_MESSAGE_ID)
 
 notify("Basecamp", `Lead Created!`)
