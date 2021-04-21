@@ -13,6 +13,9 @@ let tab = async (options) => {
 onTab('Shortcuts', () => tab([{
   name: 'Create Lead',
   value: 'basecame-create-lead'
+},{
+  name: 'Create Reminder',
+  value: 'basecame-create-reminder'
 }]))
 
 onTab('Tasks', () => tab([{
