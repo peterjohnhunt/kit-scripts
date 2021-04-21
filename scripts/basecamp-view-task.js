@@ -1,7 +1,7 @@
 // Menu: Basecamp | View Task
 // Description: View a Basecamp task
 
-let { me, selectTodo } = await lib("basecamp")
+let { selectTodo } = await lib("basecamp")
 
 let todo = await selectTodo()
 
