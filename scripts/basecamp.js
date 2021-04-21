@@ -15,13 +15,15 @@ onTab('Shortcuts', () => tab([{
   value: 'basecame-create-lead'
 }]))
 
-onTab('Basic', () => tab([{
+onTab('Tasks', () => tab([{
   name: 'Create Task',
   value: 'basecamp-create-task'
 },{
   name: 'View Task',
   value: 'basecamp-view-task'
-},{
+}]))
+
+onTab('Messages', () => tab([{
   name: 'Create Message',
   value: 'basecamp-create-message'
 },{
