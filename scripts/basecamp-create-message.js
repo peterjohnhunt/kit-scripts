@@ -1,5 +1,6 @@
 // Menu: Basecamp | Create Message
 // Description: Create a Basecamp message
+// Exclude: true
 
 let { notify } = await kit("desktop")
 let { selectProject, getMessageBoard, createMessage } = await lib("basecamp")

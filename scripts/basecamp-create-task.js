@@ -1,5 +1,6 @@
 // Menu: Basecamp | Create Task
 // Description: Create a Basecamp task
+// Exclude: true
 
 let { getDate } = await lib("helpers")
 let { notify } = await kit("desktop")

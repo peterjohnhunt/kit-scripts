@@ -1,5 +1,6 @@
 // Menu: Basecamp | View Message
 // Description: View a Basecamp message
+// Exclude: true
 
 let { selectMessage, getComments } = await lib("basecamp")
 

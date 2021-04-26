@@ -1,5 +1,6 @@
 // Menu: Basecamp | View Task
 // Description: View a Basecamp task
+// Exclude: true
 
 let { selectTodo } = await lib("basecamp")
 

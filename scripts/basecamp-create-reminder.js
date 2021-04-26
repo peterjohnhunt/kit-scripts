@@ -1,5 +1,6 @@
 // Menu: Basecamp | Create Reminder
 // Description: Create a Basecamp reminder
+// Exclude: true
 
 let { getDate } = await lib("helpers")
 let { notify } = await kit("desktop")

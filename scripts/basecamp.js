@@ -2,34 +2,31 @@
 // Description: Command Menu
 // Shortcut: shift alt b
 
+let { scriptChoices } = await lib("helpers")
 let { me } = await lib("basecamp")
 
-let tab = async (options) => {
-  let script = await arg(`Hello ${me.name}:`, options)
-  
-  await run(script)
-}
+let placeholder = `Hello ${me.name}:`
 
-onTab('Shortcuts', () => tab([{
+onTab('Shortcuts', () => scriptChoices([{
   name: 'Create Lead',
   value: 'basecame-create-lead'
 },{
   name: 'Create Reminder',
   value: 'basecame-create-reminder'
-}]))
+}], placeholder))
 
-onTab('Tasks', () => tab([{
+onTab('Tasks', () => scriptChoices([{
   name: 'Create Task',
   value: 'basecamp-create-task'
 },{
   name: 'View Task',
   value: 'basecamp-view-task'
-}]))
+}], placeholder))
 
-onTab('Messages', () => tab([{
+onTab('Messages', () => scriptChoices([{
   name: 'Create Message',
   value: 'basecamp-create-message'
 },{
   name: 'View Message',
   value: 'basecamp-view-message'
-}]))
+}], placeholder))

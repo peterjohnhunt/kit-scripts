@@ -1,6 +1,5 @@
 // Menu: Manage Projects
-// Description: 
-// Shortcut (OLD): cmd shift .
+// Exclude: true
 
 let {
   addProject,

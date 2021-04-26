@@ -1,5 +1,6 @@
 // Menu: Basecamp | Create Lead
 // Description: Create a Basecamp lead
+// Exclude: true
 
 let { notify } = await kit("desktop")
 let {getEmoji, stripEmoji} = await lib('helpers')
