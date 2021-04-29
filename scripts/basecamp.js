@@ -9,10 +9,10 @@ let placeholder = `Hello ${me.name}:`
 
 onTab('Shortcuts', () => scriptChoices([{
   name: 'Create Lead',
-  value: 'basecame-create-lead'
+  value: 'basecamp-create-lead'
 },{
   name: 'Create Reminder',
-  value: 'basecame-create-reminder'
+  value: 'basecamp-create-reminder'
 }], placeholder))
 
 onTab('Tasks', () => scriptChoices([{
